@@ -1,9 +1,12 @@
-const App = ()  => {
+import { RouterProvider } from "react-router-dom"
+import router from "./routes/Router"
+
+const App = () => {
 
   return (
-    <>
-      <h1 className="text-4xl">Hello World</h1>
-    </>
+    <div className="max-w-[1440px] mx-auto">
+      <RouterProvider router={router} ></RouterProvider>
+    </div>
   )
 }
 
