@@ -6,7 +6,7 @@ const Title = ({ children }) => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{children}</title>
+                <title>FHI Tool | {children}</title>
             </Helmet>
         </div>
     );
