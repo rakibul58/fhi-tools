@@ -12,7 +12,7 @@ const Login = () => {
         email: "",
         password: ""
     });
-    
+
     const navigate = useNavigate();
 
     const handleSubmit = event => {
@@ -45,6 +45,7 @@ const Login = () => {
                                 <input
                                     name='email'
                                     type="email"
+                                    value={userData.email}
                                     placeholder="email"
                                     className="input focus:outline-none"
                                     onChange={(event) => setUserData({
@@ -62,6 +63,7 @@ const Login = () => {
                                         name='password'
                                         type={visibility ? "text" : "password"}
                                         placeholder="password"
+                                        value={userData.password}
                                         className="input focus:outline-none"
                                         onChange={(event) => setUserData({
                                             ...userData,
