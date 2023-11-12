@@ -9,7 +9,7 @@ const HeroSection = () => {
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">Financial Health Indicator</h1>
                     <p className="mb-5 text-lg">Assess your financial health with our easy-to-use tool. Enter your financial data to get started.</p>
-                    <Link className="btn bg-[#1DCD64] hover:bg-[#1dcd63b0] text-white rounded-full">Get Started</Link>
+                    <Link to={'/login'} className="btn bg-[#1DCD64] hover:bg-[#1dcd63b0] text-white rounded-full">Get Started</Link>
                 </div>
             </div>
         </div>

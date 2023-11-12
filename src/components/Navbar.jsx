@@ -7,7 +7,7 @@ const Navbar = () => {
                 <Link to={'/'} className="normal-case text-xl font-extrabold font-serif italic text-[#1D86CD]">FHI Tool</Link>
             </div>
             <div className="navbar-end">
-                <Link className="btn bg-[#1DCD64] hover:bg-[#1dcd63b0] text-white px-8 rounded-full">Login</Link>
+                <Link to={'/login'} className="btn bg-[#1DCD64] hover:bg-[#1dcd63b0] text-white px-8 rounded-full">Login</Link>
             </div>
         </div>
     );
