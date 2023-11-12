@@ -39,6 +39,7 @@ const SignUp = () => {
                                     <span className="label-text">Organization Name</span>
                                 </label>
                                 <input
+                                    required
                                     name='organizationName'
                                     type="text"
                                     placeholder="Organization Name"
@@ -52,6 +53,7 @@ const SignUp = () => {
                                     <span className="label-text">Phone Number</span>
                                 </label>
                                 <input
+                                    required
                                     name='phoneNumber'
                                     type="tel"
                                     placeholder="Phone Number"
@@ -65,6 +67,7 @@ const SignUp = () => {
                                     <span className="label-text">Industry</span>
                                 </label>
                                 <input
+                                    required
                                     name='industry'
                                     type="text"
                                     placeholder="Industry"
@@ -80,6 +83,7 @@ const SignUp = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input
+                                    required
                                     name='email'
                                     type="email"
                                     placeholder="Email"
@@ -92,6 +96,7 @@ const SignUp = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input
+                                    required
                                     name='password'
                                     type="password"
                                     placeholder="Password"
@@ -105,6 +110,7 @@ const SignUp = () => {
                                     <span className="label-text">Confirm Password</span>
                                 </label>
                                 <input
+                                    required
                                     name='confirmPassword'
                                     type="password"
                                     placeholder="Confirm Password"
