@@ -1,6 +1,8 @@
-import { useState } from "react";
+import axios from "axios";
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const SignUp = () => {
 
@@ -12,8 +14,10 @@ const SignUp = () => {
         phoneNumber: '',
         industry: ''
     });
+    const { createUser, logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const { password, confirmPassword, ...OrganizationBody } = organizationData;
 
@@ -21,8 +25,16 @@ const SignUp = () => {
             return toast.error("Password is not matching")
         }
 
-        console.log(OrganizationBody);
-        toast.success("Your Organization have been registered Successfully")
+        const response = await axios.post(
+            `${import.meta.env.VITE_BACKEND_URI}/api/v1/organizations`,
+            OrganizationBody
+        );
+
+        if (response.data.success) {
+            await createUser(OrganizationBody.email, password);
+            await logOut();
+            navigate('/login');
+        }
     }
 
     // console.log(organizationData);

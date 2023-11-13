@@ -6,7 +6,6 @@ import Title from '../../components/Title';
 
 const Login = () => {
     const { logIn } = useContext(AuthContext);
-    const [error, setError] = useState("");
     const [visibility, setVisibility] = useState(false);
     const [userData, setUserData] = useState({
         email: "",
@@ -15,19 +14,11 @@ const Login = () => {
 
     const navigate = useNavigate();
 
-    const handleSubmit = event => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-
-        logIn(userData.email, userData.password)
-            .then(() => {
-                setError("");
-                setUserData({
-                    email: "",
-                    password: ""
-                });
-                navigate('/dashboard');
-            })
-            .catch(error => setError(error.message));
+        const { email, password } = userData;
+        await logIn(email, password);
+        navigate('/dashboard');
     }
 
     return (
@@ -43,6 +34,7 @@ const Login = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input
+                                    required
                                     name='email'
                                     type="email"
                                     value={userData.email}
@@ -60,6 +52,7 @@ const Login = () => {
                                 </label>
                                 <div className='w-full flex items-center justify-between pr-2 bg-white rounded-lg'>
                                     <input
+                                        required
                                         name='password'
                                         type={visibility ? "text" : "password"}
                                         placeholder="password"
@@ -88,9 +81,6 @@ const Login = () => {
                             </div>
                             <div className="form-control my-3">
                                 <p>Do not Have an Account? <strong><Link className='text-accent' to='/signUp'>SignUp</Link></strong></p>
-                                {
-                                    error && <p className='text-error text-sm mt-3'>{error}</p>
-                                }
                             </div>
                             <input className='btn bg-[#1DCD64] hover:bg-[#1dcd63b0] text-white px-8 rounded-full font-bold' type="submit" value="Login" />
                         </div>

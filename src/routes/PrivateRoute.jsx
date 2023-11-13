@@ -11,11 +11,13 @@ const PrivateRoute = ({ children }) => {
         return <span className="loading loading-spinner loading-lg"></span>
     }
 
+    if (user && (location.pathname === '/login' || location.pathname === '/signUp')) {
+        return <Navigate to='/dashboard' />;
+    }
+
     if (user) {
         return children;
     }
-
-    //TODO: If user types /login or /signUp and register while they are logged in it should redirect to dashboard
 
     return <Navigate to='/login' state={{ from: location }}></Navigate>
 };
