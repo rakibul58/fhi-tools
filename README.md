@@ -1,8 +1,21 @@
 # React + Vite
+### Feel Free to Sign Up for the website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## If you want to test 
+### email = test@test.com || password = test@test.com
 
-Currently, two official plugins are available:
+## Feature
+  * Register your Organization
+  * Can Update Organization Info
+  * You can check your financial health
+  * Can track the financial health by keeping it in the database
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Backend Repository: https://github.com/rakibul58/fhi-tools-backend
+
+## Want to run the website in your own environment? (Only the Landing Page would work? Because can't share the .env file which have sensitive info)
+  * Clone the repository: git clone https://github.com/rakibul58/fhi-tools.git
+  * Enter the Cloned Folder
+  * Open CMD in the folder and run: npm install
+  * run: npm run dev
+
+### Thanks For Checking it out
