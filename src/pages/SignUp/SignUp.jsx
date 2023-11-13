@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
+import Title from "../../components/Title";
 
 const SignUp = () => {
 
@@ -41,6 +42,7 @@ const SignUp = () => {
 
     return (
         <div className='w-full flex justify-center mb-24 px-3'>
+            <Title>Sign Up</Title>
             <form onSubmit={handleSubmit} className="card shadow-2xl bg-black bg-opacity-10 p-3 lg:p-6 rounded-lg">
                 <div className="card-body flex flex-col items-center gap-6">
                     <h1 className="text-3xl font-bold mb-6 text-accent text-center">Organization Sign Up</h1>
