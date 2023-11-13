@@ -53,15 +53,16 @@ const DashboardLayout = () => {
                 >
                     <ul>
                         <ul>
-                            <li className={`mb-4 border p-2 rounded-lg ${isActiveRoute('/dashboard') ? 'text-accent font-bold' : 'hover:bg-gray-600'}`}>
-                                <Link to="/dashboard">Dashboard</Link>
-                            </li>
-                            <li className={`mb-4 border p-2 rounded-lg ${isActiveRoute('/dashboard/bookings') ? 'text-accent font-bold' : 'hover:bg-gray-600'}`}>
-                                <Link to="/dashboard/report">Add Report</Link>
-                            </li>
-                            <li className={`mb-4 border p-2 rounded-lg ${isActiveRoute('/dashboard/addphone') ? 'text-accent font-bold' : 'hover:bg-gray-600'}`}>
-                                <Link to="/dashboard/profile">profile</Link>
-                            </li>
+                            <Link className="w-full" to="/dashboard">
+                                <li className={`mb-4 border p-2 rounded-lg cursor-pointer ${isActiveRoute('/dashboard') ? 'text-accent font-bold' : 'hover:bg-gray-600'}`}>
+                                    Dashboard
+                                </li>
+                            </Link>
+                            <Link className="w-full" to="/dashboard/profile">
+                                <li className={`mb-4 border p-2 rounded-lg cursor-pointer ${isActiveRoute('/dashboard/profile') ? 'text-accent font-bold' : 'hover:bg-gray-600'}`}>
+                                    Profile
+                                </li>
+                            </Link>
                         </ul>
                     </ul>
                 </div>
