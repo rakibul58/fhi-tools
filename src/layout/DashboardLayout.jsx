@@ -58,6 +58,11 @@ const DashboardLayout = () => {
                                     Dashboard
                                 </li>
                             </Link>
+                            <Link className="w-full" to="/dashboard/financialHealth">
+                                <li className={`mb-4 border p-2 rounded-lg cursor-pointer ${isActiveRoute('/dashboard/financialHealth') ? 'text-accent font-bold' : 'hover:bg-gray-600'}`}>
+                                    Financial Health
+                                </li>
+                            </Link>
                             <Link className="w-full" to="/dashboard/profile">
                                 <li className={`mb-4 border p-2 rounded-lg cursor-pointer ${isActiveRoute('/dashboard/profile') ? 'text-accent font-bold' : 'hover:bg-gray-600'}`}>
                                     Profile

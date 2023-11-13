@@ -8,6 +8,7 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import DashboardLayout from "../layout/DashboardLayout";
 import Profile from "../pages/Dashboard/Profile";
+import FinancialHealth from "../pages/Dashboard/FinancialHealth";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/profile',
                 element: <Profile />
+            },
+            {
+                path: '/dashboard/financialHealth',
+                element: <FinancialHealth />
             }
         ]
     }
